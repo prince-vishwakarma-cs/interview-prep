@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Node modules (client + server)
+client/node_modules/
+server/node_modules/
+
+# Build and output
+dist/
+build/
+*.tsbuildinfo
+
+# Vite cache
+client/.vite/
+client/dist/
+
+# Env files
+.env
+.env.*  # If using multiple environment variants
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Editor folders/files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Optional npm cache
+.npm/
