@@ -96,6 +96,11 @@ const Login = ({ setCurrentPage }) => {
             Sign up
           </button>
         </p>
+        <p className="text-xs text-slate-600 mt-4 text-center">
+          Just want to try it out? Use test credentials: <br />
+          <span className="font-medium">Email:</span> testuser@gmail.com,&nbsp;
+          <span className="font-medium">Password:</span> 1234
+        </p>
       </form>
     </div>
   );

@@ -1,14 +1,13 @@
-import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
-import Login from "./pages/auth/Login";
-import SignUp from "./pages/auth/SignUp";
-import LandingPage from "./pages/LandingPage";
-import DashBoard from "./pages/home/DashBoard";
-import InterviewPrep from "./pages/prep/InterviewPrep";
 import ProtectedRoute from "./components/ProtectedRoute";
 import UserProvider from "./context/userContext";
+import Login from "./pages/auth/Login";
+import SignUp from "./pages/auth/SignUp";
+import DashBoard from "./pages/home/DashBoard";
+import LandingPage from "./pages/LandingPage";
+import InterviewPrep from "./pages/prep/InterviewPrep";
 
 const App = () => {
   return (

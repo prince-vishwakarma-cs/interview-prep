@@ -1,13 +1,13 @@
-import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { LuSparkles } from "react-icons/lu";
-import { APP_FEATURES } from "../utils/data"; // Assuming this path and data structure are correct
+import { useNavigate } from "react-router-dom";
+import ProfileInfoCard from "../components/cards/ProfileInfoCard"; // Assuming this component is responsive
 import Modal from "../components/Modal";
+import { UserContext } from "../context/userContext";
+import { APP_FEATURES } from "../utils/data"; // Assuming this path and data structure are correct
+import mockup from "./../assets/mockup.svg";
 import Login from "./auth/Login";
 import SignUp from "./auth/SignUp";
-import { UserContext } from "../context/userContext";
-import ProfileInfoCard from "../components/cards/ProfileInfoCard"; // Assuming this component is responsive
-import mockup from "./../assets/mockup.svg";
 
 const LandingPage = () => {
   const { user } = useContext(UserContext);

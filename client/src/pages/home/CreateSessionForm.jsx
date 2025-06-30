@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { axiosInstance } from "../../utils/axios";
-import { API_PATHS } from "../../utils/api";
 import Input from "../../components/inputs/Input";
 import { UserContext } from "../../context/userContext";
+import { API_PATHS } from "../../utils/api";
+import { axiosInstance } from "../../utils/axios";
 
-export const CreateSessionForm = () => {
+export const CreateSessionForm = ({ onClose, onRefresh }) => {
   const {user}= useContext(UserContext)
   const [formData, setFormData] = useState({
     role: "",
@@ -54,7 +54,10 @@ export const CreateSessionForm = () => {
 
 
       const newId = response.data?.session?._id;
-      if (newId) navigate(`/interview-prep/${newId}`);
+   if(newId) {
+    if (onClose) onClose();      
+if (onRefresh) onRefresh(); 
+   }
     } catch (err) {
       setError(
         err.response?.data?.message ||

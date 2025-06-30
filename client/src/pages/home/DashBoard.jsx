@@ -1,17 +1,16 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { LuPlus, LuSparkles } from "react-icons/lu";
-import { CARD_BG } from "../../utils/data";
-import { toast } from "react-hot-toast";
-import DashboardLayout from "../../components/layouts/DashboardLayout";
-import { useNavigate } from "react-router-dom";
-import { axiosInstance } from "../../utils/axios";
-import { API_PATHS } from "../../utils/api";
-import Modal from "../../components/Modal";
-import { CreateSessionForm } from "./CreateSessionForm";
-import DeleteAlertContent from "../../components/DeleteAlertContent";
-import { SummaryCard } from "../../components/cards/SummaryCard";
-import SpinnerLoader from "../../components/loaders/SpinLoader";
 import moment from "moment";
+import { useCallback, useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
+import { LuPlus } from "react-icons/lu";
+import { useNavigate } from "react-router-dom";
+import DeleteAlertContent from "../../components/DeleteAlertContent";
+import Modal from "../../components/Modal";
+import { SummaryCard } from "../../components/cards/SummaryCard";
+import DashboardLayout from "../../components/layouts/DashboardLayout";
+import { API_PATHS } from "../../utils/api";
+import { axiosInstance } from "../../utils/axios";
+import { CARD_BG } from "../../utils/data";
+import { CreateSessionForm } from "./CreateSessionForm";
 
 const SkeletonLine = ({ width = "full", height = "h-3" }) => (
   <div className={`bg-gray-200 dark:bg-gray-700/10 ${height} w-${width} rounded-md`} />
@@ -113,7 +112,11 @@ const Dashboard = () => {
       </div>
 
       <Modal isOpen={isCreateOpen} onClose={() => setCreateOpen(false)} hideHeader>
-        <CreateSessionForm />
+      <CreateSessionForm
+  onClose={() => setCreateOpen(false)}
+  onRefresh={fetchSessions}
+/>
+
       </Modal>
 
       <Modal
