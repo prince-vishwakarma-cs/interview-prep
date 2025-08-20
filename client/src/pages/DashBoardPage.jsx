@@ -111,7 +111,7 @@ const Dashboard = () => {
         )}
 
         <button
-          className=" fixed bottom-10 right-10 flex items-center text-sm font-semibold px-6 py-2.5 rounded-full bg-button-lightest text-light-button-color transition-colors hover:bg-light-button-hover-bg-color hover:text-light-button-hover-color"
+          className=" fixed bottom-10 right-10 flex items-center text-sm font-semibold px-6 py-2.5 rounded-full bg-button-lightest-hover hover:text-light-button-hover-color"
           onClick={() => navigate("/create-session")}
         >
           <Plus size={20} />

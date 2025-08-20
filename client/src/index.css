@@ -22,6 +22,7 @@
   --color-secondary-color-alpha: rgba(19,21,23,0.64);
   --color-border-color: rgba(19,21,23,0.08);
   --color-button-lightest : rgb(238, 240, 242);
+  --color-button-lightest-hover :rgb(101, 102, 105);
 
   --color-button-text:#ffffff;
   --color-primary-button-bg : #333537;
