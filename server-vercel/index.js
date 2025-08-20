@@ -9,8 +9,7 @@ import { connectDB } from "./utils/db.js";
 import { FRONTEND_URL, MONGO_URI, PORT } from "./utils/variables.js";
 
 const app = express();
-const port = PORT || 5000;
-
+const port = PORT;
 app.use(
   cors({
     origin: FRONTEND_URL,
