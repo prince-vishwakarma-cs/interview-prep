@@ -24,9 +24,12 @@ export const APP_FEATURES = [
     title: "Save & Organize",
     description: "Bookmark and categorize your questions & answers.",
   },
+ {
+  id: 6,
+  title: "Back and Forth Discussion",
+  description: "Engage in interactive, real interview-like conversations with AI.",
+}
 ];
-
-
 
   export const CARD_BG = [
     { id: 1, bgcolor: 'linear-gradient(135deg, #e6f8f3 0%, #f7fcfa 100%)' },

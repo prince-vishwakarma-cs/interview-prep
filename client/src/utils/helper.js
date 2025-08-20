@@ -3,7 +3,6 @@ export const validateEmail = (email) => {
     return regex.test(email);
   };
 
-
   export const getInitials = (title) => {
     if (!title) return "";
   
@@ -16,3 +15,5 @@ export const validateEmail = (email) => {
   
     return initials.toUpperCase();
   };
+
+  export const BASE_URL = import.meta.env.VITE_BASE_URL;
