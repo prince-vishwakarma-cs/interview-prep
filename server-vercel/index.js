@@ -10,36 +10,41 @@ import { FRONTEND_URL, MONGO_URI, PORT } from "./utils/variables.js";
 
 const app = express();
 const port = PORT;
+
+// Updated CORS configuration to allow multiple origins
 app.use(
   cors({
-    origin: FRONTEND_URL,
+    origin: [FRONTEND_URL, "http://localhost:5173"],
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials:true
+    credentials: true,
   })
 );
 
 app.use(express.json());
-app.use(cookieParser())
+app.use(cookieParser());
 
+// Middleware to connect to the database for each request
 app.use(async (req, res, next) => {
   try {
     await connectDB(MONGO_URI);
     next();
   } catch (error) {
-    console.error('Database connection failed:', error);
-    res.status(500).json({ 
-      success: false, 
-      message: 'Database connection failed',
-      error: error.message 
+    console.error("Database connection failed:", error);
+    res.status(500).json({
+      success: false,
+      message: "Database connection failed",
+      error: error.message,
     });
   }
 });
 
+// API routes
 app.use("/api/auth", authRoute);
 app.use("/api/sessions", sessionRoutes);
 app.use("/api/questions", questionRoutes);
-app.use("/api/ai",aiRouter);
+app.use("/api/ai", aiRouter);
 
+// Root endpoint
 app.get("/", (req, res) =>
   res.status(200).json({
     success: true,
@@ -47,4 +52,4 @@ app.get("/", (req, res) =>
   })
 );
 
-export default app
+export default app;
