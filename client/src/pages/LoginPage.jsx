@@ -31,7 +31,7 @@ const Login = () => {
       toast.success("Login successful! Redirecting...");
       navigate("/dashboard");
     } catch (err) {
-     const errorMessage =
+      const errorMessage =
         err?.data?.error || "An unknown error occurred. Please try again.";
       setError(errorMessage);
     }
@@ -86,6 +86,16 @@ const Login = () => {
               Sign up
             </button>
           </p>
+
+          <div className="mt-2 text-center text-xs text-secondary-text">
+            <p>Want to test out?</p>
+            <p>
+              Email: <code className="font-mono">testinguser@gmail.com</code>
+            </p>
+            <p>
+              Password: <code className="font-mono">testuser247</code>
+            </p>
+          </div>
         </form>
       </div>
     </div>
