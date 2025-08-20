@@ -16,7 +16,7 @@ const App = () => {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <p className="text-lg font-medium">Loading...</p>
+        <p className="text-lg font-medium">Loading....</p>
       </div>
     );
   }

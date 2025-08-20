@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -7,39 +7,38 @@
   --color-primary: rgb(158, 169, 240);
 }
 
-@theme {
-  --color-light-button-color: rgba(19, 21, 23, 0.64);
-  --color-light-button-bg-color: rgba(19, 21, 23, 0.04);
-  --color-light-button-hover-border-color: rgba(19, 21, 23, 0);
-  --color-light-button-hover-bg-color: rgba(19, 21, 23, 0.64);
-  --color-light-button-hover-color: #ffffff;
-  --color-opacity-second-light: rgba(19, 21, 23, 0.08);
-  --color-card-bg-color: rgba(255, 255, 255, 0.8);
+@theme{
+  --color-light-button-color:rgba(19,21,23,0.64);
+  --color-light-button-bg-color:rgba(19,21,23,0.04);
+  --color-light-button-hover-border-color:rgba(19,21,23,0);
+  --color-light-button-hover-bg-color:rgba(19,21,23,0.64);
+  --color-light-button-hover-color:#ffffff;
+  --color-opacity-second-light:rgba(19,21,23,0.08);
+  --color-card-bg-color:rgba(255,255,255,0.8);
 
-  --color-primary-background: #f7f8f9;
-  --color-primary-text: rgb(19, 21, 23);
-  --color-secondary-text: rgba(19, 21, 23, 0.64);
-  --color-secondary-color-alpha: rgba(19, 21, 23, 0.64);
-  --color-border-color: rgba(19, 21, 23, 0.08);
+  --color-primary-background : #f7f8f9;
+  --color-primary-text : rgb(19,21,23);
+  --color-secondary-text: rgba(19,21,23,0.64);
+  --color-secondary-color-alpha: rgba(19,21,23,0.64);
+  --color-border-color: rgba(19,21,23,0.08);
 
-  --color-button-text: #ffffff;
-  --color-primary-button-bg: #333537;
-  --color-primary-button-bg-hover: #535557;
-  --color-hover-alpha: rgba(19, 21, 23, 0.04);
+  --color-button-text:#ffffff;
+  --color-primary-button-bg : #333537;
+  --color-primary-button-bg-hover:#535557;
+  --color-hover-alpha : rgba(19,21,23,0.04);
 
-  --color-input-bg: #ffffff;
-  --color-input-border: rgba(19, 21, 23, 0.08);
-  --color-card-bg: rgba(255, 255, 255, 0.8);
-  --color-card-border-hover: rgba(19, 21, 23, 0.16);
+  --color-input-bg : #ffffff;
+  --color-input-border : rgba(19,21,23,0.08);
+  --color-card-bg: rgba(255,255,255,0.8);
+  --color-card-border-hover: rgba(19,21,23,0.16);
 
-  --color-divider: rgba(19, 21, 23, 0.08);
-  --color-light-button-bg: rgba(19, 21, 23, 0.04);
-  --color-light-button-text: rgba(19, 21, 23, 0.64);
+ --color-divider : rgba(19,21,23,0.08);
+ --color-light-button-bg : rgba(19,21,23,0.04);
+ --color-light-button-text :rgba(19,21,23,0.64);
+
 }
 
-:root,
-body,
-#root {
+:root,body,#root{
   height: 100%;
 }
 
@@ -54,3 +53,4 @@ body,
     overflow-x: hidden;
   }
 }
+
